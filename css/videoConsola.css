@@ -6,7 +6,11 @@
     --color-cruz: #06090e;  
     --color-sombra:#9e9ba1;
 }
-body{background:linear-gradient(to top, blue, red);height: 100vh; margin:0;}
+body{background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #35edc2);
+	background-size: 400% 400%;
+	animation: animacionFondo 15s ease-in-out infinite;
+	height: 100vh;
+    margin: 0;}
 
 
 .contenedor{
@@ -98,7 +102,7 @@ box-shadow: -30px 30px 50px rgba(18,19,16,0.7);
 }
 
 
-.botones{
+.botones-B{
     width: 30px;
     height: 30px;
     background-color:var(--color-botones);
@@ -107,19 +111,38 @@ box-shadow: -30px 30px 50px rgba(18,19,16,0.7);
     left: 160px;
     border-radius: 50%;
     box-shadow: inset 0px 9px 10px -9px rgba(255,255,255,1);
+    transform: rotate(-30deg);
 }
 
-.botones::after{
+.botones-A{
     content:'';
     width: 30px;
     height: 30px;
     background-color:var(--color-botones);
     position: absolute;
-    top: -24px;
-    left: 41px;
+    top: 230px;
+    left: 200px;
     border-radius: 50%;
     box-shadow: inset 0px 9px 10px -9px rgba(255,255,255,1);
+    transform: rotate(-30deg);
 }
+
+/* --- Efecto pulsación botón --- */
+.botones-B:hover, .botones-A:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.botones-B p, .botones-A p{
+    font-size: 10px;
+    padding-top: 25px;
+    padding-left: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(44, 44, 144);
+    font-weight: 700;
+    
+}
+p {font-size: 25px;}
 
 .contenedorselect,.contenedorstart{
     width: 40px;
@@ -158,6 +181,11 @@ box-shadow: -30px 30px 50px rgba(18,19,16,0.7);
     border-radius: 10px;
     transform: rotate(-25deg);
 }
+/*----- Efecto pulsación botón ---*/
+.start:hover, .select:hover{
+    background-color:#716d74;
+    cursor: pointer;
+}
 
 .start p, .select p{
     font-size: 8px;
@@ -185,4 +213,19 @@ p {font-size: 25px;}
     box-shadow: inset 5px 5px 10px rgba(0,0,0,0.41);
     border-radius: 10px;
     
+}
+
+/* ---------------------- ANIMACIONES ---------------------- */
+
+/* --- Animación del fondo ---*/
+@keyframes animacionFondo {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

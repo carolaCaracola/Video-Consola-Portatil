@@ -8,6 +8,8 @@
     
     <!--- LLAMADA A HOJA DE ESTILO -->
     <link rel="stylesheet" href="css/videoConsola.css">
+    
+
 </head>
 <body>
 <div class="contenedor">
@@ -19,11 +21,12 @@
         <div class="contenedor-cruz"></div>
         <div class="cruz"></div>
         <div class="contenedor-botones"></div>
-        <div class="botones"></div>
+        <div class="botones-B"><p>B</p></div>
+        <div class="botones-A"><p>A</p></div>
         <div class="contenedorselect"></div>
-        <div class="select"><p>SELECT</p></div>
+        <div onclick="finalPantalla()" class="select"><p>SELECT</p></div>
         <div class="contenedorstart"></div>
-        <div class="start"><p>START</p></div>
+        <div onclick="inicioPantalla()" class="start"><p>START</p></div>
         <div class="contenedor-altavoz">
             <div class="altavoz"></div>
             <div class="altavoz"></div>
@@ -33,6 +36,8 @@
             <div class="altavoz"></div>
         </div>
     </div>
-</div>  
+</div> 
+<!--- LLAMADA A ARCHIVO JAVASCRIPT -->
+<script src="js/funcionesVideoConsola.js"></script> 
 </body>
 </html>
